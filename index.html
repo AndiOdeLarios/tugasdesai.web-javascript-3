@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0 auto;
+            padding: 20px;
+            max-width: 600px;
+            background: linear-gradient(to bottom right, #f0f8ff, #add8e6);
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        #task-input {
+            width: 70%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        #add-task-btn {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        #add-task-btn:hover {
+            background-color: #45a049;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+        li {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            background-color: #fff;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        li.completed {
+            text-decoration: line-through;
+            background-color: #d3ffd3;
+        }
+        button {
+            margin-left: 10px;
+            padding: 5px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            opacity: 0.9;
+        }
+        .complete-btn {
+            background-color: #4caf50;
+            color: white;
+        }
+        .delete-btn {
+            background-color: #f44336;
+            color: white;
+        }
+        h3 {
+            color: #fff;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+        button:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>To-Do List</h1>
+    <input type="text" id="task-input" placeholder="Enter a new task">
+    <button id="add-task-btn">Add Task</button>
+
+    <h3>Filter Tasks</h3>
+    <button onclick="filterTasks('all')">All</button>
+    <button onclick="filterTasks('active')">Active</button>
+    <button onclick="filterTasks('completed')">Completed</button>
+
+    <ul id="task-list"></ul>
+
+    <script src="app.js"></script>
+</body>
+</html>
